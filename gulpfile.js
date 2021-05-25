@@ -1,13 +1,14 @@
-var gulp = require('gulp');
-var babel = require('gulp-babel');
+var gulp = require("gulp");
+var babel = require("gulp-babel");
 
-gulp.task('bundle', function () {
+gulp.task("bundle", (done) => {
   gulp
-    .src('./src/ProductCompare.js')
+    .src("./src/ProductCompare.js")
     .pipe(
       babel({
-        presets: ['env'],
+        presets: ["env"],
       })
     )
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest("./dist/js/"));
+  done();
 });
